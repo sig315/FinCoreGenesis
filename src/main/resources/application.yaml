@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: FinCoreGenesis
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/fincoregenesis
+    username: dummy
+    password: dummy
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
