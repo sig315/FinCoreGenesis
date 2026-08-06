@@ -123,7 +123,7 @@ spring:
 
 6. ブラウザで以下にアクセスする
 
-http://localhost:8080/
+http://localhost:8080
 
 
 ## 注意事項
