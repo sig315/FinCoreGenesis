@@ -2,33 +2,38 @@
 
 ## 概要
 
-FinCoreGenesisは、JavaとSpring Bootを用いて開発している口座管理システムです。
+JavaとSpring Bootを用いて開発している口座管理システム
 
-本プロジェクトは、要件定義から設計・実装・テストまでの一連の開発工程を経験し、
-ポートフォリオとして公開することを目的としています。
+現在は、ユーザー管理機能および口座管理機能を実装
 
 ## 使用技術
 
 ### バックエンド
+
 - Java 21
 - Spring Boot
 - Spring Data JPA
 
 ### フロントエンド
+
 - HTML
 - CSS
 - Thymeleaf
 
 ### データベース
+
 - MySQL
 
 ### データベース管理ツール
+
 - MySQL Workbench
 
 ### ビルドツール
+
 - Maven
 
 ### 開発環境
+
 - IntelliJ IDEA
 - Git
 - GitHub
@@ -37,21 +42,38 @@ FinCoreGenesisは、JavaとSpring Bootを用いて開発している口座管理
 
 ### 実装済み
 
-- ユーザー登録画面
-- ユーザー登録機能
-- MySQL接続
+#### ユーザー管理
 
-### 実装予定
+- ユーザー登録
+- ユーザー一覧
+- ユーザー詳細
+- ユーザー編集
+- ユーザー削除
+- ユーザー登録・編集時の入力バリデーション
 
-- ログイン
-- ログアウト
+#### 口座管理
+
 - 口座登録
 - 口座一覧
 - 口座詳細
-- 口座編集
-- 口座削除
 - 入金
 - 出金
+- 入金額のバリデーション
+- 出金額のバリデーション
+- 残高を超える出金の制御
+
+### 実装予定
+
+- 口座編集
+- 口座削除
+- 口座番号の重複チェック
+- ユーザーと口座の関連付け
+- ログイン
+- ログアウト
+- Spring Securityによる認証・認可
+- エラーハンドリングの改善
+- 自動テスト
+- UIの改善
 
 ## プロジェクト構成
 
@@ -60,15 +82,25 @@ FinCoreGenesis
 ├── src
 │   ├── main
 │   │   ├── java
+│   │   │   └── com.fincore.fincoregenesis
+│   │   │       ├── config
+│   │   │       ├── controller
+│   │   │       ├── dto
+│   │   │       ├── entity
+│   │   │       ├── exception
+│   │   │       ├── repository
+│   │   │       └── service
+│   │   │
 │   │   └── resources
 │   │       ├── static
 │   │       ├── templates
 │   │       └── application.yml
+│   │
 │   └── test
-├── .gitignore 
+│
+├── .gitignore
 ├── pom.xml
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
 ### ディレクトリ概要
@@ -124,10 +156,3 @@ spring:
 6. ブラウザで以下にアクセスする
 
 http://localhost:8080
-
-
-## 注意事項
-
-セキュリティ保護のため、`application.yml` のデータベースパスワードはダミー値に変更しています。
-
-実行する際は、ご自身の環境に合わせて設定してください。
