@@ -87,7 +87,7 @@ FinCoreGenesis
 
 ### セットアップ手順
 
-1. 本リポジトリをクローンする
+1. リポジトリをクローンする
 
 ```bash
 git clone https://github.com/＜あなたのGitHubユーザー名＞/FinCoreGenesis.git
@@ -119,9 +119,3 @@ spring:
 
 http://localhost:8080
 
-
-## 注意事項
-
-セキュリティ保護のため、`application.yml` のデータベースパスワードはダミー値に変更しています。
-
-実行する際は、ご自身の環境に合わせて設定してください。
